@@ -1,0 +1,543 @@
+[08:42:47:668] [ERROR] - freemarker.log._Log4jLoggerFactory$Log4jLogger.error(_Log4jLoggerFactory.java:59) - Error executing FreeMarker template
+freemarker.core._TemplateModelException: Java method "static com.coonchen.core.utils.WebTool.formatDateMinute(Integer)" couldn't be called: Can't convert the 1st argument's value to the target Java type, Integer. The type of the actual value was: sequence+extended_hash+string (wrapper: f.c.DefaultToExpression$EmptyStringAndSequence)
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${webtool.formatDateMinute(item.lastl...  [in template "admin/user/list.html" at line 135, column 45]
+----
+	at freemarker.ext.beans.SimpleMethod.createArgumentTypeMismarchException(SimpleMethod.java:161) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethod.unwrapArguments(SimpleMethod.java:99) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethod.unwrapArguments(SimpleMethod.java:76) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:70) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.MethodCall._eval(MethodCall.java:65) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Expression.eval(Expression.java:81) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:96) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:59) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:362) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:315) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:242) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:595) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:107) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:93) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:326) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:332) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.process(Environment.java:305) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.template.Template.process(Template.java:378) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_92]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_92]
+[08:42:47:734] [ERROR] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is freemarker.core._TemplateModelException: Java method "static com.coonchen.core.utils.WebTool.formatDateMinute(Integer)" couldn't be called: Can't convert the 1st argument's value to the target Java type, Integer. The type of the actual value was: sequence+extended_hash+string (wrapper: f.c.DefaultToExpression$EmptyStringAndSequence)
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${webtool.formatDateMinute(item.lastl...  [in template "admin/user/list.html" at line 135, column 45]
+----] with root cause
+freemarker.core._TemplateModelException: Java method "static com.coonchen.core.utils.WebTool.formatDateMinute(Integer)" couldn't be called: Can't convert the 1st argument's value to the target Java type, Integer. The type of the actual value was: sequence+extended_hash+string (wrapper: f.c.DefaultToExpression$EmptyStringAndSequence)
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${webtool.formatDateMinute(item.lastl...  [in template "admin/user/list.html" at line 135, column 45]
+----
+	at freemarker.ext.beans.SimpleMethod.createArgumentTypeMismarchException(SimpleMethod.java:161) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethod.unwrapArguments(SimpleMethod.java:99) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethod.unwrapArguments(SimpleMethod.java:76) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:70) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.MethodCall._eval(MethodCall.java:65) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Expression.eval(Expression.java:81) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:96) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:59) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:362) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:315) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:242) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:595) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:107) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:93) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:326) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:332) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.process(Environment.java:305) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.template.Template.process(Template.java:378) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_92]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_92]
+[08:43:00:822] [ERROR] - freemarker.log._Log4jLoggerFactory$Log4jLogger.error(_Log4jLoggerFactory.java:59) - Error executing FreeMarker template
+freemarker.core._TemplateModelException: Java method "static com.coonchen.core.utils.WebTool.formatDateMinute(Integer)" couldn't be called: Can't convert the 1st argument's value to the target Java type, Integer. The type of the actual value was: sequence+extended_hash+string (wrapper: f.c.DefaultToExpression$EmptyStringAndSequence)
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${webtool.formatDateMinute(item.lastl...  [in template "admin/user/list.html" at line 135, column 45]
+----
+	at freemarker.ext.beans.SimpleMethod.createArgumentTypeMismarchException(SimpleMethod.java:161) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethod.unwrapArguments(SimpleMethod.java:99) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethod.unwrapArguments(SimpleMethod.java:76) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:70) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.MethodCall._eval(MethodCall.java:65) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Expression.eval(Expression.java:81) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:96) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:59) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:362) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:315) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:242) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:595) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:107) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:93) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:326) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:332) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.process(Environment.java:305) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.template.Template.process(Template.java:378) [freemarker-2.3.26-incubating.jar:2.3.26]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) [spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) [tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_92]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_92]
+[08:43:00:830] [ERROR] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:181) - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is freemarker.core._TemplateModelException: Java method "static com.coonchen.core.utils.WebTool.formatDateMinute(Integer)" couldn't be called: Can't convert the 1st argument's value to the target Java type, Integer. The type of the actual value was: sequence+extended_hash+string (wrapper: f.c.DefaultToExpression$EmptyStringAndSequence)
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${webtool.formatDateMinute(item.lastl...  [in template "admin/user/list.html" at line 135, column 45]
+----] with root cause
+freemarker.core._TemplateModelException: Java method "static com.coonchen.core.utils.WebTool.formatDateMinute(Integer)" couldn't be called: Can't convert the 1st argument's value to the target Java type, Integer. The type of the actual value was: sequence+extended_hash+string (wrapper: f.c.DefaultToExpression$EmptyStringAndSequence)
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${webtool.formatDateMinute(item.lastl...  [in template "admin/user/list.html" at line 135, column 45]
+----
+	at freemarker.ext.beans.SimpleMethod.createArgumentTypeMismarchException(SimpleMethod.java:161) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethod.unwrapArguments(SimpleMethod.java:99) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethod.unwrapArguments(SimpleMethod.java:76) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.ext.beans.SimpleMethodModel.exec(SimpleMethodModel.java:70) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.MethodCall._eval(MethodCall.java:65) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Expression.eval(Expression.java:81) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.DollarVariable.calculateInterpolatedStringOrMarkup(DollarVariable.java:96) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:59) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:362) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.executedNestedContentForCollOrSeqListing(IteratorBlock.java:315) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedContent(IteratorBlock.java:271) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:242) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:595) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:107) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:93) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:326) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.visit(Environment.java:332) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.core.Environment.process(Environment.java:305) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at freemarker.template.Template.process(Template.java:378) ~[freemarker-2.3.26-incubating.jar:2.3.26]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.processTemplate(FreeMarkerView.java:367) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.doRender(FreeMarkerView.java:284) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.freemarker.FreeMarkerView.renderMergedTemplateModel(FreeMarkerView.java:234) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.AbstractTemplateView.renderMergedOutputModel(AbstractTemplateView.java:167) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.view.AbstractView.render(AbstractView.java:303) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1286) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1041) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:984) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846) ~[spring-webmvc-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52) ~[tomcat-embed-websocket-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) ~[spring-web-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:80) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:799) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1455) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_92]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_92]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_92]
+[10:32:01:360] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+; SQL []; Duplicate entry '3333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:32:03:216] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+; SQL []; Duplicate entry '3333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:32:03:836] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+; SQL []; Duplicate entry '3333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:32:04:567] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+; SQL []; Duplicate entry '3333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:32:05:563] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+; SQL []; Duplicate entry '3333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:32:05:780] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+; SQL []; Duplicate entry '3333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:32:05:997] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+; SQL []; Duplicate entry '3333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:32:06:230] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'
+; SQL []; Duplicate entry '3333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '3333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:35:37:844] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:35:47:125] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:35:49:115] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:35:59:536] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:36:07:571] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:36:09:539] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:36:09:971] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:36:10:199] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:36:10:400] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:41:30:045] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:41:32:984] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:41:35:381] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:41:36:029] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:41:44:328] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:41:48:634] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:41:48:853] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:41:49:047] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:41:49:305] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:42:40:962] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:42:41:945] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:42:42:185] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:42:42:441] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:42:42:680] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:42:57:281] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:42:58:746] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:43:02:328] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:43:14:913] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:43:38:863] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:44:12:695] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'
+; SQL []; Duplicate entry '333' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '333' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:44:28:642] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '33323232' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '33323232' for key 'mobile'
+; SQL []; Duplicate entry '33323232' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '33323232' for key 'mobile'---from url：http://localhost/admin/user/save.do
+[10:44:42:229] [ERROR] - com.coonchen.framework.exception.GlobalExceptionHandler.jsonErrorHandler(GlobalExceptionHandler.java:27) - 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '33323232' for key 'mobile'
+### The error may involve com.coonchen.core.dao.UserMapper.insertSelective-Inline
+### The error occurred while setting parameters
+### SQL: insert into sys_user      ( userid,                              nickname,                       mobile,                       password,                       securekey,                              addtime,                       lastlogintime,                       logintime,                       ipaddress,                                                                                      vu )       values ( ?,                              ?,                       ?,                       ?,                       ?,                              ?,                       ?,                       ?,                       ?,                                                                                      ? )
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '33323232' for key 'mobile'
+; SQL []; Duplicate entry '33323232' for key 'mobile'; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '33323232' for key 'mobile'---from url：http://localhost/admin/user/save.do

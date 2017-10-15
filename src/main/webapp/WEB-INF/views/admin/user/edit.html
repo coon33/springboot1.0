@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<#include "../include/common.html"/>
+<script type="text/javascript" src="${imagePath}js/hui/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="${imagePath}js/hui/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="${imagePath}js/hui/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="${imagePath}js/hui/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="${imagePath}js/hui/lib/jquery.form/jquery.form.js"></script>
+</head>
+<body>
+<article class="page-container">
+	<form action="/admin/user/save.do" method="post" class="form form-horizontal" id="form-member-add">
+		<input type="hidden" name="userid" value="${(user.userid)!''}"/>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-1"><span class="c-red">*</span>手机号码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="${(user.mobile)!''}" <#if (user.mobile)??> readonly="readonly" </#if> placeholder="" id="mobile" name="mobile">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-1"><span class="c-red">*</span>用户昵称：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="${(user.nickname)!''}" placeholder="" id="nickname" name="nickname">
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius" type="button" id="submitbtn" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $('#submitbtn').click(function(){
+            //if($("#form-member-add").valid()){
+                $("#form-member-add").ajaxSubmit(function(data){
+                    if(data.success){
+                        var index = parent.layer.getFrameIndex(window.name);
+                        parent.close_success(index);
+                    }else{
+                        if(data.valid_error){
+                            for(var msg in data.valid_error){
+                                layer.alert(data.valid_error[msg]);
+                                return false;
+                            }
+						}else if(data.msg){
+                            layer.alert(data.msg);
+                            return false;
+                        }
+                    }
+                })
+            //}
+        });
+    });
+    $("#form-member-add").validate({
+        rules:{
+            nickname:{
+                required:true,
+                minlength:2,
+                maxlength:16
+            },
+            mobile:{
+                required:true,
+                isMobile:true
+            }
+        },
+        onkeyup:false,
+        focusCleanup:true,
+        success:"valid",
+        submitHandler:function(form){
+            //$(form).ajaxSubmit();
+            var index = parent.layer.getFrameIndex(window.name);
+            //parent.$('.btn-refresh').click();
+            parent.layer.close(index);
+        }
+    });
+</script>
+</html>

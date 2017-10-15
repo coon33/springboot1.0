@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<#include "../include/common.html"/>
+<script type="text/javascript" src="${imagePath}js/hui/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="${imagePath}js/hui/lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="${imagePath}js/hui/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script type="text/javascript" src="${imagePath}js/hui/lib/jquery.form/jquery.form.js"></script>
+</head>
+<body>
+<article class="page-container">
+	<form action="/admin/user/pwd.do" method="post" class="form form-horizontal" id="form-member-add">
+		<input type="hidden" name="id" value="${id!}"/>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-1"><span class="c-red">*</span>原密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" value="" placeholder="" id="oldpwd" name="oldpwd">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-1"><span class="c-red">*</span>新密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" value="" placeholder="" id="newpwd" name="newpwd">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-1"><span class="c-red">*</span>确认新密码：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="password" class="input-text" value="" placeholder="" id="newpwdqr" name="newpwdqr">
+			</div>
+		</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius" type="button" id="submitbtn" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+</body>
+<script type="text/javascript">
+    $(function(){
+        $('#submitbtn').click(function(){
+            if($("#form-member-add").valid()){
+                $("#form-member-add").ajaxSubmit(function(data){
+                    if(data.success){
+                        var index = parent.layer.getFrameIndex(window.name);
+                        parent.close_success(index);
+                    }else{
+                        if(data.valid_error){
+                            for(var msg in data.valid_error){
+                                layer.alert(data.valid_error[msg]);
+                                return false;
+                            }
+						}else if(data.msg){
+                            layer.alert(data.msg);
+                            return false;
+                        }
+                    }
+                })
+            }
+        });
+    });
+    $("#form-member-add").validate({
+        rules:{
+            oldpwd:{
+                required:true,
+                minlength:6,
+                maxlength:16
+            },
+            newpwd:{
+                required:true,
+                minlength:6,
+                maxlength:16
+            },
+            newpwdqr:{
+                required:true,
+                minlength:6,
+                maxlength:16,
+                equalTo: "#newpwd"
+            }
+        },
+        onkeyup:false,
+        focusCleanup:true
+    });
+</script>
+</html>

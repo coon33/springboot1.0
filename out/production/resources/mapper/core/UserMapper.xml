@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.coonchen.core.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.coonchen.core.entity.User" >
+    <id column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="sugid" property="sugid" jdbcType="INTEGER" />
+    <result column="nickname" property="nickname" jdbcType="VARCHAR" />
+    <result column="mobile" property="mobile" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="securekey" property="securekey" jdbcType="VARCHAR" />
+    <result column="userheadpath" property="userheadpath" jdbcType="VARCHAR" />
+    <result column="addtime" property="addtime" jdbcType="INTEGER" />
+    <result column="lastlogintime" property="lastlogintime" jdbcType="INTEGER" />
+    <result column="logintime" property="logintime" jdbcType="INTEGER" />
+    <result column="ipaddress" property="ipaddress" jdbcType="VARCHAR" />
+    <result column="gold" property="gold" jdbcType="DOUBLE" />
+    <result column="device" property="device" jdbcType="VARCHAR" />
+    <result column="devicecode" property="devicecode" jdbcType="VARCHAR" />
+    <result column="currentversion" property="currentversion" jdbcType="VARCHAR" />
+    <result column="systemversion" property="systemversion" jdbcType="VARCHAR" />
+    <result column="authentication" property="authentication" jdbcType="VARCHAR" />
+    <result column="openid" property="openid" jdbcType="VARCHAR" />
+    <result column="channelid" property="channelid" jdbcType="VARCHAR" />
+    <result column="loginsource" property="loginsource" jdbcType="SMALLINT" />
+    <result column="vu" property="vu" jdbcType="SMALLINT" />
+    <result column="apksource" property="apksource" jdbcType="VARCHAR" />
+    <result column="contactmobile" property="contactmobile" jdbcType="VARCHAR" />
+    <result column="realname" property="realname" jdbcType="VARCHAR" />
+    <result column="idcard" property="idcard" jdbcType="VARCHAR" />
+    <result column="visable" property="visable" jdbcType="SMALLINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    userid, sugid, nickname, mobile, password, securekey, userheadpath, addtime, lastlogintime, 
+    logintime, ipaddress, gold, device, devicecode, currentversion, systemversion, authentication, 
+    openid, channelid, loginsource, vu, apksource, contactmobile, realname, idcard, visable
+  </sql>
+  <insert id="insertSelective" parameterType="com.coonchen.core.entity.User" >
+    insert into sys_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="sugid != null" >
+        sugid,
+      </if>
+      <if test="nickname != null" >
+        nickname,
+      </if>
+      <if test="mobile != null" >
+        mobile,
+      </if>
+      <if test="password != null" >
+        password,
+      </if>
+      <if test="securekey != null" >
+        securekey,
+      </if>
+      <if test="userheadpath != null" >
+        userheadpath,
+      </if>
+      <if test="addtime != null" >
+        addtime,
+      </if>
+      <if test="lastlogintime != null" >
+        lastlogintime,
+      </if>
+      <if test="logintime != null" >
+        logintime,
+      </if>
+      <if test="ipaddress != null" >
+        ipaddress,
+      </if>
+      <if test="gold != null" >
+        gold,
+      </if>
+      <if test="device != null" >
+        device,
+      </if>
+      <if test="devicecode != null" >
+        devicecode,
+      </if>
+      <if test="currentversion != null" >
+        currentversion,
+      </if>
+      <if test="systemversion != null" >
+        systemversion,
+      </if>
+      <if test="authentication != null" >
+        authentication,
+      </if>
+      <if test="openid != null" >
+        openid,
+      </if>
+      <if test="channelid != null" >
+        channelid,
+      </if>
+      <if test="loginsource != null" >
+        loginsource,
+      </if>
+      <if test="vu != null" >
+        vu,
+      </if>
+      <if test="apksource != null" >
+        apksource,
+      </if>
+      <if test="contactmobile != null" >
+        contactmobile,
+      </if>
+      <if test="realname != null" >
+        realname,
+      </if>
+      <if test="idcard != null" >
+        idcard,
+      </if>
+      <if test="visable != null" >
+        visable,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="sugid != null" >
+        #{sugid,jdbcType=INTEGER},
+      </if>
+      <if test="nickname != null" >
+        #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="securekey != null" >
+        #{securekey,jdbcType=VARCHAR},
+      </if>
+      <if test="userheadpath != null" >
+        #{userheadpath,jdbcType=VARCHAR},
+      </if>
+      <if test="addtime != null" >
+        #{addtime,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogintime != null" >
+        #{lastlogintime,jdbcType=INTEGER},
+      </if>
+      <if test="logintime != null" >
+        #{logintime,jdbcType=INTEGER},
+      </if>
+      <if test="ipaddress != null" >
+        #{ipaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gold != null" >
+        #{gold,jdbcType=DOUBLE},
+      </if>
+      <if test="device != null" >
+        #{device,jdbcType=VARCHAR},
+      </if>
+      <if test="devicecode != null" >
+        #{devicecode,jdbcType=VARCHAR},
+      </if>
+      <if test="currentversion != null" >
+        #{currentversion,jdbcType=VARCHAR},
+      </if>
+      <if test="systemversion != null" >
+        #{systemversion,jdbcType=VARCHAR},
+      </if>
+      <if test="authentication != null" >
+        #{authentication,jdbcType=VARCHAR},
+      </if>
+      <if test="openid != null" >
+        #{openid,jdbcType=VARCHAR},
+      </if>
+      <if test="channelid != null" >
+        #{channelid,jdbcType=VARCHAR},
+      </if>
+      <if test="loginsource != null" >
+        #{loginsource,jdbcType=SMALLINT},
+      </if>
+      <if test="vu != null" >
+        #{vu,jdbcType=SMALLINT},
+      </if>
+      <if test="apksource != null" >
+        #{apksource,jdbcType=VARCHAR},
+      </if>
+      <if test="contactmobile != null" >
+        #{contactmobile,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard != null" >
+        #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="visable != null" >
+        #{visable,jdbcType=SMALLINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="selectSelective" resultMap="BaseResultMap" parameterType="com.coonchen.core.entity.User" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user
+    <where >
+      <if test="userid != null" >
+         and userid = #{userid,jdbcType=INTEGER}
+      </if>
+      <if test="sugid != null" >
+         and sugid = #{sugid,jdbcType=INTEGER}
+      </if>
+      <if test="nickname != null" >
+         and nickname = #{nickname,jdbcType=VARCHAR}
+      </if>
+      <if test="mobile != null" >
+         and mobile = #{mobile,jdbcType=VARCHAR}
+      </if>
+      <if test="password != null" >
+         and password = #{password,jdbcType=VARCHAR}
+      </if>
+      <if test="securekey != null" >
+         and securekey = #{securekey,jdbcType=VARCHAR}
+      </if>
+      <if test="userheadpath != null" >
+         and userheadpath = #{userheadpath,jdbcType=VARCHAR}
+      </if>
+      <if test="addtime != null" >
+         and addtime = #{addtime,jdbcType=INTEGER}
+      </if>
+      <if test="lastlogintime != null" >
+         and lastlogintime = #{lastlogintime,jdbcType=INTEGER}
+      </if>
+      <if test="logintime != null" >
+         and logintime = #{logintime,jdbcType=INTEGER}
+      </if>
+      <if test="ipaddress != null" >
+         and ipaddress = #{ipaddress,jdbcType=VARCHAR}
+      </if>
+      <if test="gold != null" >
+         and gold = #{gold,jdbcType=DOUBLE}
+      </if>
+      <if test="device != null" >
+         and device = #{device,jdbcType=VARCHAR}
+      </if>
+      <if test="devicecode != null" >
+         and devicecode = #{devicecode,jdbcType=VARCHAR}
+      </if>
+      <if test="currentversion != null" >
+         and currentversion = #{currentversion,jdbcType=VARCHAR}
+      </if>
+      <if test="systemversion != null" >
+         and systemversion = #{systemversion,jdbcType=VARCHAR}
+      </if>
+      <if test="authentication != null" >
+         and authentication = #{authentication,jdbcType=VARCHAR}
+      </if>
+      <if test="openid != null" >
+         and openid = #{openid,jdbcType=VARCHAR}
+      </if>
+      <if test="channelid != null" >
+         and channelid = #{channelid,jdbcType=VARCHAR}
+      </if>
+      <if test="loginsource != null" >
+         and loginsource = #{loginsource,jdbcType=SMALLINT}
+      </if>
+      <if test="vu != null" >
+         and vu = #{vu,jdbcType=SMALLINT}
+      </if>
+      <if test="apksource != null" >
+         and apksource = #{apksource,jdbcType=VARCHAR}
+      </if>
+      <if test="contactmobile != null" >
+         and contactmobile = #{contactmobile,jdbcType=VARCHAR}
+      </if>
+      <if test="realname != null" >
+         and realname = #{realname,jdbcType=VARCHAR}
+      </if>
+      <if test="idcard != null" >
+         and idcard = #{idcard,jdbcType=VARCHAR}
+      </if>
+      <if test="visable != null" >
+         and visable = #{visable,jdbcType=SMALLINT}
+      </if>
+    </where>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user
+    where userid = #{userid,jdbcType=INTEGER}
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="com.coonchen.core.entity.User" >
+    update sys_user
+    <set >
+      <if test="sugid != null" >
+        sugid = #{sugid,jdbcType=INTEGER},
+      </if>
+      <if test="nickname != null" >
+        nickname = #{nickname,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null" >
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="securekey != null" >
+        securekey = #{securekey,jdbcType=VARCHAR},
+      </if>
+      <if test="userheadpath != null" >
+        userheadpath = #{userheadpath,jdbcType=VARCHAR},
+      </if>
+      <if test="addtime != null" >
+        addtime = #{addtime,jdbcType=INTEGER},
+      </if>
+      <if test="lastlogintime != null" >
+        lastlogintime = #{lastlogintime,jdbcType=INTEGER},
+      </if>
+      <if test="logintime != null" >
+        logintime = #{logintime,jdbcType=INTEGER},
+      </if>
+      <if test="ipaddress != null" >
+        ipaddress = #{ipaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="gold != null" >
+        gold = #{gold,jdbcType=DOUBLE},
+      </if>
+      <if test="device != null" >
+        device = #{device,jdbcType=VARCHAR},
+      </if>
+      <if test="devicecode != null" >
+        devicecode = #{devicecode,jdbcType=VARCHAR},
+      </if>
+      <if test="currentversion != null" >
+        currentversion = #{currentversion,jdbcType=VARCHAR},
+      </if>
+      <if test="systemversion != null" >
+        systemversion = #{systemversion,jdbcType=VARCHAR},
+      </if>
+      <if test="authentication != null" >
+        authentication = #{authentication,jdbcType=VARCHAR},
+      </if>
+      <if test="openid != null" >
+        openid = #{openid,jdbcType=VARCHAR},
+      </if>
+      <if test="channelid != null" >
+        channelid = #{channelid,jdbcType=VARCHAR},
+      </if>
+      <if test="loginsource != null" >
+        loginsource = #{loginsource,jdbcType=SMALLINT},
+      </if>
+      <if test="vu != null" >
+        vu = #{vu,jdbcType=SMALLINT},
+      </if>
+      <if test="apksource != null" >
+        apksource = #{apksource,jdbcType=VARCHAR},
+      </if>
+      <if test="contactmobile != null" >
+        contactmobile = #{contactmobile,jdbcType=VARCHAR},
+      </if>
+      <if test="realname != null" >
+        realname = #{realname,jdbcType=VARCHAR},
+      </if>
+      <if test="idcard != null" >
+        idcard = #{idcard,jdbcType=VARCHAR},
+      </if>
+      <if test="visable != null" >
+        visable = #{visable,jdbcType=SMALLINT},
+      </if>
+    </set>
+    where userid = #{userid,jdbcType=INTEGER}
+  </update>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from sys_user
+    where userid = #{userid,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByPrimaryKeys" >
+    delete from sys_user
+    where userid in 
+    <foreach item="item" index="index" collection="array" open="(" separator="," close=")" >
+      #{item}
+    </foreach>
+  </delete>
+  <select id="selectPageList" resultMap="BaseResultMap" parameterType="java.util.Map" >
+    select 
+    <include refid="Base_Column_List" />
+    from sys_user
+    <where >
+      <if test="userid != null" >
+         and userid = #{userid,jdbcType=INTEGER}
+      </if>
+      <if test="sugid != null" >
+         and sugid = #{sugid,jdbcType=INTEGER}
+      </if>
+      <if test="nickname != null" >
+         and nickname = #{nickname,jdbcType=VARCHAR}
+      </if>
+      <if test="mobile != null" >
+         and mobile = #{mobile,jdbcType=VARCHAR}
+      </if>
+      <if test="password != null" >
+         and password = #{password,jdbcType=VARCHAR}
+      </if>
+      <if test="securekey != null" >
+         and securekey = #{securekey,jdbcType=VARCHAR}
+      </if>
+      <if test="userheadpath != null" >
+         and userheadpath = #{userheadpath,jdbcType=VARCHAR}
+      </if>
+      <if test="addtime != null" >
+         and addtime = #{addtime,jdbcType=INTEGER}
+      </if>
+      <if test="lastlogintime != null" >
+         and lastlogintime = #{lastlogintime,jdbcType=INTEGER}
+      </if>
+      <if test="logintime != null" >
+         and logintime = #{logintime,jdbcType=INTEGER}
+      </if>
+      <if test="ipaddress != null" >
+         and ipaddress = #{ipaddress,jdbcType=VARCHAR}
+      </if>
+      <if test="gold != null" >
+         and gold = #{gold,jdbcType=DOUBLE}
+      </if>
+      <if test="device != null" >
+         and device = #{device,jdbcType=VARCHAR}
+      </if>
+      <if test="devicecode != null" >
+         and devicecode = #{devicecode,jdbcType=VARCHAR}
+      </if>
+      <if test="currentversion != null" >
+         and currentversion = #{currentversion,jdbcType=VARCHAR}
+      </if>
+      <if test="systemversion != null" >
+         and systemversion = #{systemversion,jdbcType=VARCHAR}
+      </if>
+      <if test="authentication != null" >
+         and authentication = #{authentication,jdbcType=VARCHAR}
+      </if>
+      <if test="openid != null" >
+         and openid = #{openid,jdbcType=VARCHAR}
+      </if>
+      <if test="channelid != null" >
+         and channelid = #{channelid,jdbcType=VARCHAR}
+      </if>
+      <if test="loginsource != null" >
+         and loginsource = #{loginsource,jdbcType=SMALLINT}
+      </if>
+      <if test="vu != null" >
+         and vu = #{vu,jdbcType=SMALLINT}
+      </if>
+      <if test="apksource != null" >
+         and apksource = #{apksource,jdbcType=VARCHAR}
+      </if>
+      <if test="contactmobile != null" >
+         and contactmobile = #{contactmobile,jdbcType=VARCHAR}
+      </if>
+      <if test="realname != null" >
+         and realname = #{realname,jdbcType=VARCHAR}
+      </if>
+      <if test="idcard != null" >
+         and idcard = #{idcard,jdbcType=VARCHAR}
+      </if>
+      <if test="visable != null" >
+         and visable = #{visable,jdbcType=SMALLINT}
+      </if>
+      <if test="nickmobile != null" >
+        and (mobile like CONCAT('%',#{nickmobile},'%') or nickname like CONCAT('%',#{nickmobile},'%'))
+      </if>
+    </where>
+    <if test="orderby != null and sort !=null" >
+      order by ${orderby} ${sort}
+    </if>
+    limit #{page.start},#{page.row} 
+  </select>
+  <select id="selectPageListCount" resultType="java.lang.Integer" parameterType="java.util.Map" >
+    select count(1) from sys_user
+    <where >
+      <if test="userid != null" >
+         and userid = #{userid,jdbcType=INTEGER}
+      </if>
+      <if test="sugid != null" >
+         and sugid = #{sugid,jdbcType=INTEGER}
+      </if>
+      <if test="nickname != null" >
+         and nickname = #{nickname,jdbcType=VARCHAR}
+      </if>
+      <if test="mobile != null" >
+         and mobile = #{mobile,jdbcType=VARCHAR}
+      </if>
+      <if test="password != null" >
+         and password = #{password,jdbcType=VARCHAR}
+      </if>
+      <if test="securekey != null" >
+         and securekey = #{securekey,jdbcType=VARCHAR}
+      </if>
+      <if test="userheadpath != null" >
+         and userheadpath = #{userheadpath,jdbcType=VARCHAR}
+      </if>
+      <if test="addtime != null" >
+         and addtime = #{addtime,jdbcType=INTEGER}
+      </if>
+      <if test="lastlogintime != null" >
+         and lastlogintime = #{lastlogintime,jdbcType=INTEGER}
+      </if>
+      <if test="logintime != null" >
+         and logintime = #{logintime,jdbcType=INTEGER}
+      </if>
+      <if test="ipaddress != null" >
+         and ipaddress = #{ipaddress,jdbcType=VARCHAR}
+      </if>
+      <if test="gold != null" >
+         and gold = #{gold,jdbcType=DOUBLE}
+      </if>
+      <if test="device != null" >
+         and device = #{device,jdbcType=VARCHAR}
+      </if>
+      <if test="devicecode != null" >
+         and devicecode = #{devicecode,jdbcType=VARCHAR}
+      </if>
+      <if test="currentversion != null" >
+         and currentversion = #{currentversion,jdbcType=VARCHAR}
+      </if>
+      <if test="systemversion != null" >
+         and systemversion = #{systemversion,jdbcType=VARCHAR}
+      </if>
+      <if test="authentication != null" >
+         and authentication = #{authentication,jdbcType=VARCHAR}
+      </if>
+      <if test="openid != null" >
+         and openid = #{openid,jdbcType=VARCHAR}
+      </if>
+      <if test="channelid != null" >
+         and channelid = #{channelid,jdbcType=VARCHAR}
+      </if>
+      <if test="loginsource != null" >
+         and loginsource = #{loginsource,jdbcType=SMALLINT}
+      </if>
+      <if test="vu != null" >
+         and vu = #{vu,jdbcType=SMALLINT}
+      </if>
+      <if test="apksource != null" >
+         and apksource = #{apksource,jdbcType=VARCHAR}
+      </if>
+      <if test="contactmobile != null" >
+         and contactmobile = #{contactmobile,jdbcType=VARCHAR}
+      </if>
+      <if test="realname != null" >
+         and realname = #{realname,jdbcType=VARCHAR}
+      </if>
+      <if test="idcard != null" >
+         and idcard = #{idcard,jdbcType=VARCHAR}
+      </if>
+      <if test="visable != null" >
+         and visable = #{visable,jdbcType=SMALLINT}
+      </if>
+      <if test="nickmobile != null" >
+        and (mobile like CONCAT('%',#{nickmobile},'%') or nickname like CONCAT('%',#{nickmobile},'%'))
+      </if>
+    </where>
+  </select>
+</mapper>

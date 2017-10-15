@@ -1,0 +1,195 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<#include "../include/common.html"/>
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="${imagePath}js/hui/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript">
+ $(function(){});
+/*添加*/
+function toAdd(title,url,w,h){
+	layer_show(title,url,w,h);
+}
+/*查看*/
+function toView(title,url,w,h){
+	layer_show(title,url,w,h);
+}
+ /*编辑*/
+ function toEdit(title,url,id,w,h){
+     layer_show(title,url,w,h);
+ }
+ /*密码-修改*/
+ function toPwd(title,url,w,h){
+     layer_show(title,url,w,h);
+ }
+/*停用/启用*/
+function doAble(id,visable){
+    var tip = "确认要禁用吗";
+    if(visable==0) tip = "确认要启用吗"
+	layer.confirm(tip,function(){
+		$.ajax({
+			type: 'POST',
+            url: '/admin/user/able.do',
+            data:{"id":id,"able":visable},
+			dataType: 'json',
+			success: function(data){
+                if(data.success){
+                    var msg = "已禁用";
+                    if(visable==0) msg = "已启用";
+                    layer.msg(msg,{icon:1,time:1000},function(){
+                        $("#searchForm").submit();
+                    });
+                }else{
+                    if(data.valid_error){
+                        for(var msg in data.valid_error){
+                            layer.alert(data.valid_error[msg]);
+                            break;
+                        }
+                    }else if(data.msg){
+                        layer.alert(data.msg);
+                    }
+                }
+			},
+			error:function(data) {
+                layer.alert(data.msg);
+			},
+		});		
+	});
+}
+
+/*删除*/
+function doDel(id){
+	layer.confirm('确认要删除吗？',function(){
+		$.ajax({
+			type: 'POST',
+			url: '/admin/user/del.do',
+			data:{"ids":id},
+			dataType: 'json',
+			success: function(data){
+                if(data.success){
+                    layer.msg('已删除',{icon:1,time:1000},function(){
+                        $("#searchForm").submit();
+                    });
+                }else{
+                    if(data.valid_error){
+                        for(var msg in data.valid_error){
+                            layer.alert(data.valid_error[msg]);
+                            break;
+                        }
+                    }else if(data.msg){
+                        layer.alert(data.msg);
+                    }
+                }
+            },
+			error:function(data) {
+                layer.alert(data.msg);
+			},
+		});		
+	});
+}
+
+
+ /*删除-批量*/
+function doDelAll(){
+    var userids = "";
+	$("input[flag='userids']").each(function(){
+        if($(this).is(':checked')){
+			if(userids!="") userids+=",";
+			userids+=$(this).val();
+		}
+	});
+	if(userids!=""){
+        layer.confirm('确认删除选中的数据？',function(){
+            $.ajax({
+                type: 'POST',
+                url: '/admin/user/del.do',
+                data:{"ids":userids},
+                dataType: 'json',
+                success: function(data){
+                    if(data.success){
+                        layer.msg('已删除',{icon:1,time:1000},function(){
+                            $("#searchForm").submit();
+                        });
+                    }else{
+                        if(data.valid_error){
+                            for(var msg in data.valid_error){
+                                layer.alert(data.valid_error[msg]);
+                                break;
+                            }
+                        }else if(data.msg){
+                            layer.alert(data.msg);
+                        }
+                    }
+                },
+                error:function(data) {
+                    layer.alert(data.msg);
+                },
+            });
+        });
+
+	}else{
+        layer.alert("请选中要删除行的复选框！");
+	}
+}
+
+/*保存-成功*/
+function close_success(index){
+    layer.close(index);
+    layer.alert('保存成功', function(){
+        $("#searchForm").submit();
+    });
+}
+</script> 
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 系统管理 <span class="c-gray en">&gt;</span> 用户管理 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="page-container">
+	<div class="text-c pd-5 bg-1 bk-gray" style="text-align: left;padding-left: 10px">
+		<form action="/admin/user/list.html" method="post" id="searchForm">
+		<input type="text" class="input-text" style="width:250px" placeholder="输入用户昵称、手机号码" name="nickmobile" value="${searchMap.nickmobile!}">
+		<button type="submit" class="btn btn-success radius" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜用户</button>
+		<span style="float:right"><a href="javascript:;" onclick="doDelAll()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="toAdd('添加用户','toEdit.html','400','260')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a></span>
+		</form>
+	</div>
+	<div class="mt-20">
+	<table class="table table-border table-bordered table-hover table-bg table-sort">
+		<thead>
+			<tr class="text-c">
+				<th width="3%"><input type="checkbox" name="" value=""></th>
+				<th>用户昵称</th>
+				<th width="10%">手机</th>
+				<th width="15%">最后登录时间</th>
+				<th width="15%">加入时间</th>
+				<th width="5%">状态</th>
+				<th width="10%">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<#list lstData as item>
+				<tr class="text-c">
+					<td><input type="checkbox" value="${item.userid}" flag="userids"></td>
+					<td><u style="cursor:pointer" class="text-primary" onclick="toView('${item.nickname!}','toView.html?id=${item.userid!}','360','400')">${item.nickname}</u></td>
+					<td>${item.mobile!}</td>
+					<td>${webtool.formatDateMinute(item.lastlogintime!)}</td>
+					<td>${webtool.formatDateMinute(item.addtime!)}</td>
+					<td class="td-status">
+						<#if item.visable==1>
+							<span class="label label-success radius">已启用</span>
+						<#else>
+							<span class="label label-danger radius">禁用</span>
+						</#if>
+					</td>
+					<td class="td-manage">
+						<a style="text-decoration:none" onClick="doAble('${item.userid!}','${item.visable!}')" href="javascript:;" <#if item.visable==1>title="禁用"<#else>title="启用"</#if>><i class="Hui-iconfont"><#if item.visable==1>&#xe631;<#else>&#xe615;</#if></i></a>
+						<a title="编辑" href="javascript:;" onclick="toEdit('编辑','toEdit.html?userid=${item.userid!}','4','400','260')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+						<a style="text-decoration:none" class="ml-5" onClick="toPwd('修改密码','toPwd.html?id=${item.userid!}','600','270')" href="javascript:;" title="修改密码"><i class="Hui-iconfont">&#xe63f;</i></a>
+						<a title="删除" href="javascript:;" onclick="doDel('${item.userid!}')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+				</tr>
+			</#list>
+		</tbody>
+	</table>
+	<@page url="list.html?pageon=~p&nickmobile=${searchMap.nickmobile!}" style="admin"> </@page>
+	</div>
+</div>
+</body>
+</html>

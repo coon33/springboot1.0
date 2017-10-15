@@ -1,0 +1,173 @@
+[00:02:55:322] [INFO] - org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:984) - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c178a76: startup date [Thu Oct 12 23:48:48 CST 2017]; root of context hierarchy
+[10:50:37:472] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) - Starting App on coonchen-liunx with PID 8413 (/home/coonchen/source/framework/springboot/out/production/classes started by coonchen in /home/coonchen/source/framework/springboot)
+[10:50:37:484] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) - No active profile set, falling back to default profiles: default
+[10:50:37:534] [INFO] - org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c178a76: startup date [Sun Oct 15 10:50:37 CST 2017]; root of context hierarchy
+[10:50:37:765] [INFO] - org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) - HV000001: Hibernate Validator 5.3.5.Final
+[10:50:40:603] [INFO] - org.springframework.beans.factory.support.DefaultListableBeanFactory.registerBeanDefinition(DefaultListableBeanFactory.java:828) - Overriding bean definition for bean 'freeMarkerConfiguration' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=viewResolverFreeMarker; factoryMethodName=freeMarkerConfiguration; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/coonchen/framework/web/view/ViewResolverFreeMarker.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration$FreeMarkerWebConfiguration; factoryMethodName=freeMarkerConfiguration; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/freemarker/FreeMarkerAutoConfiguration$FreeMarkerWebConfiguration.class]]
+[10:50:42:275] [INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) - Tomcat initialized with port(s): 80 (http)
+[10:50:42:285] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Starting service [Tomcat]
+[10:50:42:286] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Starting Servlet Engine: Apache Tomcat/8.5.16
+[10:50:42:353] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Initializing Spring embedded WebApplicationContext
+[10:50:42:353] [INFO] - org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) - Root WebApplicationContext: initialization completed in 4822 ms
+[10:50:42:442] [INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) - Mapping servlet: 'dispatcherServlet' to [/]
+[10:50:42:446] [INFO] - org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'characterEncodingFilter' to: [/*]
+[10:50:43:077] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/json]}" onto public java.lang.Object com.allwell.erp.controller.IndexController.json(org.springframework.ui.ModelMap)
+[10:50:43:079] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/index.html]}" onto public java.lang.Object com.allwell.erp.controller.IndexController.index(org.springframework.ui.ModelMap)
+[10:50:43:080] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/del.do]}" onto public java.lang.Object com.coonchen.core.controller.UserController.del(org.springframework.ui.ModelMap)
+[10:50:43:081] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/able.do]}" onto public java.lang.Object com.coonchen.core.controller.UserController.able()
+[10:50:43:081] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/pwd.do]}" onto public java.lang.Object com.coonchen.core.controller.UserController.pwd()
+[10:50:43:081] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/toEdit.html]}" onto public java.lang.Object com.coonchen.core.controller.UserController.toEdit(org.springframework.ui.ModelMap)
+[10:50:43:082] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/toView.html]}" onto public java.lang.Object com.coonchen.core.controller.UserController.toView(org.springframework.ui.ModelMap)
+[10:50:43:082] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/toPwd.html]}" onto public java.lang.Object com.coonchen.core.controller.UserController.toPwd(org.springframework.ui.ModelMap)
+[10:50:43:083] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/list.html]}" onto public java.lang.Object com.coonchen.core.controller.UserController.list(org.springframework.ui.ModelMap)
+[10:50:43:083] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/save.do]}" onto public java.lang.Object com.coonchen.core.controller.UserController.save(org.springframework.ui.ModelMap)
+[10:50:43:084] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/ugroup/del.do]}" onto public java.lang.Object com.coonchen.core.controller.UserGroupController.del(org.springframework.ui.ModelMap)
+[10:50:43:084] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/ugroup/toEdit.html]}" onto public java.lang.Object com.coonchen.core.controller.UserGroupController.toEdit(org.springframework.ui.ModelMap)
+[10:50:43:085] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/ugroup/list.html]}" onto public java.lang.Object com.coonchen.core.controller.UserGroupController.list(org.springframework.ui.ModelMap)
+[10:50:43:085] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/ugroup/save.do]}" onto public java.lang.Object com.coonchen.core.controller.UserGroupController.save(org.springframework.ui.ModelMap)
+[10:50:43:093] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[10:50:43:094] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[10:50:43:128] [INFO] - org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:362) - Mapped URL path [/resource/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[10:50:43:159] [INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c178a76: startup date [Sun Oct 15 10:50:37 CST 2017]; root of context hierarchy
+[10:50:43:195] [INFO] - org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) - Detected @ExceptionHandler methods in globalExceptionHandler
+[10:50:43:274] [INFO] - org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+[10:50:43:686] [INFO] - org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) - Registering beans for JMX exposure on startup
+[10:50:43:687] [INFO] - org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) - Bean with name 'dataSource' has been autodetected for JMX exposure
+[10:50:43:691] [INFO] - org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+[10:50:43:728] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Initializing ProtocolHandler ["http-nio-80"]
+[10:50:43:822] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Starting ProtocolHandler ["http-nio-80"]
+[10:50:43:825] [ERROR] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:181) - Failed to start end point associated with ProtocolHandler ["http-nio-80"]
+java.net.SocketException: 权限不够
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_144]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[?:1.8.0_144]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[?:1.8.0_144]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[?:1.8.0_144]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[?:1.8.0_144]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.App.main(App.java:15) [classes/:?]
+[10:50:43:829] [ERROR] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:181) - Failed to start connector [Connector[HTTP/1.1-80]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-80]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225) [tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:250) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:193) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:546) [spring-context-4.3.10.RELEASE.jar:4.3.10.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.6.RELEASE.jar:1.5.6.RELEASE]
+	at com.App.main(App.java:15) [classes/:?]
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1029) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	... 13 more
+Caused by: java.net.SocketException: 权限不够
+	at sun.nio.ch.Net.bind0(Native Method) ~[?:1.8.0_144]
+	at sun.nio.ch.Net.bind(Net.java:433) ~[?:1.8.0_144]
+	at sun.nio.ch.Net.bind(Net.java:425) ~[?:1.8.0_144]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223) ~[?:1.8.0_144]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) ~[?:1.8.0_144]
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:990) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:635) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1022) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150) ~[tomcat-embed-core-8.5.16.jar:8.5.16]
+	... 13 more
+[10:50:43:842] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Pausing ProtocolHandler ["http-nio-80"]
+[10:50:43:842] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Stopping service [Tomcat]
+[10:50:43:855] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+[10:50:43:856] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Stopping ProtocolHandler ["http-nio-80"]
+[10:50:43:856] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Destroying ProtocolHandler ["http-nio-80"]
+[10:50:43:860] [INFO] - org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer.logAutoConfigurationReport(AutoConfigurationReportLoggingInitializer.java:101) - 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+[10:50:43:864] [ERROR] - org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter.report(LoggingFailureAnalysisReporter.java:42) - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 80 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 80, or configure this application to listen on another port.
+
+[10:50:43:865] [INFO] - org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:984) - Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c178a76: startup date [Sun Oct 15 10:50:37 CST 2017]; root of context hierarchy
+[10:50:43:866] [INFO] - org.springframework.jmx.export.MBeanExporter.destroy(MBeanExporter.java:449) - Unregistering JMX-exposed beans on shutdown
+[10:50:43:867] [INFO] - org.springframework.jmx.support.MBeanRegistrationSupport.unregisterBeans(MBeanRegistrationSupport.java:241) - Unregistering JMX-exposed beans
+[11:04:50:543] [INFO] - org.springframework.boot.StartupInfoLogger.logStarting(StartupInfoLogger.java:48) - Starting App on coonchen-liunx with PID 10699 (/home/coonchen/source/framework/springboot/out/production/classes started by root in /home/coonchen/source/framework/springboot)
+[11:04:50:548] [INFO] - org.springframework.boot.SpringApplication.logStartupProfileInfo(SpringApplication.java:593) - No active profile set, falling back to default profiles: default
+[11:04:50:621] [INFO] - org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:583) - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c178a76: startup date [Sun Oct 15 11:04:50 CST 2017]; root of context hierarchy
+[11:04:50:812] [INFO] - org.hibernate.validator.internal.util.Version.<clinit>(Version.java:30) - HV000001: Hibernate Validator 5.3.5.Final
+[11:04:53:219] [INFO] - org.springframework.beans.factory.support.DefaultListableBeanFactory.registerBeanDefinition(DefaultListableBeanFactory.java:828) - Overriding bean definition for bean 'freeMarkerConfiguration' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=viewResolverFreeMarker; factoryMethodName=freeMarkerConfiguration; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [com/coonchen/framework/web/view/ViewResolverFreeMarker.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration$FreeMarkerWebConfiguration; factoryMethodName=freeMarkerConfiguration; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/freemarker/FreeMarkerAutoConfiguration$FreeMarkerWebConfiguration.class]]
+[11:04:54:570] [INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.initialize(TomcatEmbeddedServletContainer.java:89) - Tomcat initialized with port(s): 80 (http)
+[11:04:54:580] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Starting service [Tomcat]
+[11:04:54:581] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Starting Servlet Engine: Apache Tomcat/8.5.16
+[11:04:54:672] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Initializing Spring embedded WebApplicationContext
+[11:04:54:672] [INFO] - org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.prepareEmbeddedWebApplicationContext(EmbeddedWebApplicationContext.java:276) - Root WebApplicationContext: initialization completed in 4055 ms
+[11:04:54:767] [INFO] - org.springframework.boot.web.servlet.ServletRegistrationBean.onStartup(ServletRegistrationBean.java:190) - Mapping servlet: 'dispatcherServlet' to [/]
+[11:04:54:771] [INFO] - org.springframework.boot.web.servlet.AbstractFilterRegistrationBean.configure(AbstractFilterRegistrationBean.java:258) - Mapping filter: 'characterEncodingFilter' to: [/*]
+[11:04:55:312] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/json]}" onto public java.lang.Object com.allwell.erp.controller.IndexController.json(org.springframework.ui.ModelMap)
+[11:04:55:313] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/index.html]}" onto public java.lang.Object com.allwell.erp.controller.IndexController.index(org.springframework.ui.ModelMap)
+[11:04:55:315] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/del.do]}" onto public java.lang.Object com.coonchen.core.controller.UserController.del(org.springframework.ui.ModelMap)
+[11:04:55:315] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/able.do]}" onto public java.lang.Object com.coonchen.core.controller.UserController.able()
+[11:04:55:315] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/pwd.do]}" onto public java.lang.Object com.coonchen.core.controller.UserController.pwd()
+[11:04:55:316] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/toEdit.html]}" onto public java.lang.Object com.coonchen.core.controller.UserController.toEdit(org.springframework.ui.ModelMap)
+[11:04:55:316] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/toView.html]}" onto public java.lang.Object com.coonchen.core.controller.UserController.toView(org.springframework.ui.ModelMap)
+[11:04:55:317] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/toPwd.html]}" onto public java.lang.Object com.coonchen.core.controller.UserController.toPwd(org.springframework.ui.ModelMap)
+[11:04:55:317] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/list.html]}" onto public java.lang.Object com.coonchen.core.controller.UserController.list(org.springframework.ui.ModelMap)
+[11:04:55:317] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/user/save.do]}" onto public java.lang.Object com.coonchen.core.controller.UserController.save(org.springframework.ui.ModelMap)
+[11:04:55:318] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/ugroup/del.do]}" onto public java.lang.Object com.coonchen.core.controller.UserGroupController.del(org.springframework.ui.ModelMap)
+[11:04:55:319] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/ugroup/toEdit.html]}" onto public java.lang.Object com.coonchen.core.controller.UserGroupController.toEdit(org.springframework.ui.ModelMap)
+[11:04:55:319] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/ugroup/list.html]}" onto public java.lang.Object com.coonchen.core.controller.UserGroupController.list(org.springframework.ui.ModelMap)
+[11:04:55:320] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/admin/ugroup/save.do]}" onto public java.lang.Object com.coonchen.core.controller.UserGroupController.save(org.springframework.ui.ModelMap)
+[11:04:55:327] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+[11:04:55:328] [INFO] - org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:543) - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+[11:04:55:360] [INFO] - org.springframework.web.servlet.handler.AbstractUrlHandlerMapping.registerHandler(AbstractUrlHandlerMapping.java:362) - Mapped URL path [/resource/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+[11:04:55:392] [INFO] - org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache(RequestMappingHandlerAdapter.java:534) - Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4c178a76: startup date [Sun Oct 15 11:04:50 CST 2017]; root of context hierarchy
+[11:04:55:429] [INFO] - org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.initExceptionHandlerAdviceCache(ExceptionHandlerExceptionResolver.java:273) - Detected @ExceptionHandler methods in globalExceptionHandler
+[11:04:55:510] [INFO] - org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer.postProcessTemplateLoaders(FreeMarkerConfigurer.java:127) - ClassTemplateLoader for Spring macros added to FreeMarker configuration
+[11:04:55:905] [INFO] - org.springframework.jmx.export.MBeanExporter.afterSingletonsInstantiated(MBeanExporter.java:431) - Registering beans for JMX exposure on startup
+[11:04:55:907] [INFO] - org.springframework.jmx.export.MBeanExporter.autodetect(MBeanExporter.java:916) - Bean with name 'dataSource' has been autodetected for JMX exposure
+[11:04:55:911] [INFO] - org.springframework.jmx.export.MBeanExporter.registerBeanInstance(MBeanExporter.java:671) - Located MBean 'dataSource': registering with JMX server as MBean [com.alibaba.druid.pool:name=dataSource,type=DruidDataSource]
+[11:04:55:930] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Initializing ProtocolHandler ["http-nio-80"]
+[11:04:56:067] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Starting ProtocolHandler ["http-nio-80"]
+[11:04:56:073] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Using a shared selector for servlet write/read
+[11:04:56:098] [INFO] - org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:201) - Tomcat started on port(s): 80 (http)
+[11:04:56:192] [INFO] - org.ehcache.sizeof.filters.AnnotationSizeOfFilter.<clinit>(AnnotationSizeOfFilter.java:49) - Using regular expression provided through VM argument org.ehcache.sizeof.filters.AnnotationSizeOfFilter.pattern for IgnoreSizeOf annotation : ^.*cache\..*IgnoreSizeOf$
+[11:04:56:206] [INFO] - org.ehcache.sizeof.impl.AgentLoader$1.run(AgentLoader.java:71) - Located valid 'tools.jar' at '/usr/local/jdk1.8.0_144/jre/../lib/tools.jar'
+[11:04:56:212] [INFO] - org.ehcache.sizeof.impl.JvmInformation.<clinit>(JvmInformation.java:436) - Detected JVM data model settings of: 64-Bit HotSpot JVM with Compressed OOPs
+[11:04:56:480] [INFO] - org.ehcache.sizeof.impl.AgentLoader.getAgentFile(AgentLoader.java:186) - Extracted agent jar to temporary file /tmp/ehcache-sizeof-agent2755218935727294222.jar
+[11:04:56:481] [INFO] - org.ehcache.sizeof.impl.AgentLoader.loadAgent(AgentLoader.java:122) - Trying to load agent @ /tmp/ehcache-sizeof-agent2755218935727294222.jar
+[11:04:56:485] [INFO] - org.ehcache.sizeof.impl.AgentLoader.loadAgent(AgentLoader.java:138) - Agent successfully loaded and available!
+[11:04:56:581] [INFO] - org.ehcache.core.EhcacheManager.createCache(EhcacheManager.java:291) - Cache 'usersession' created in EhcacheManager.
+[11:04:56:584] [INFO] - org.springframework.boot.StartupInfoLogger.logStarted(StartupInfoLogger.java:57) - Started App in 6.272 seconds (JVM running for 7.2)
+[11:05:08:126] [INFO] - org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:179) - Initializing Spring FrameworkServlet 'dispatcherServlet'
+[11:05:08:126] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:489) - FrameworkServlet 'dispatcherServlet': initialization started
+[11:05:08:153] [INFO] - org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:508) - FrameworkServlet 'dispatcherServlet': initialization completed in 26 ms
+[11:05:08:240] [INFO] - com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:854) - {dataSource-1} inited
+[11:05:08:840] [WARN] - org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1176) - No mapping found for HTTP request with URI [/welcome.html] in DispatcherServlet with name 'dispatcherServlet'
+[11:05:09:013] [WARN] - org.springframework.web.servlet.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1176) - No mapping found for HTTP request with URI [/favicon.ico] in DispatcherServlet with name 'dispatcherServlet'
